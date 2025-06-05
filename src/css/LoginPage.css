@@ -1,0 +1,178 @@
+html,
+body,
+#root,
+#app,
+div[data-reactroot] {
+  width: 100% !important;
+  height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow-x: hidden;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Login container - make it take the full viewport */
+.login-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+  background: linear-gradient(135deg, #fff0f6 0%, #ffdeeb 50%, #fff0f6 100%) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Login card */
+.login-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+  padding: 40px;
+  width: 90% !important;
+  max-width: 400px;
+  margin: 0 auto !important;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-out;
+  border: 1px solid rgba(255, 182, 193, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Login title */
+.login-title {
+  color: #d6336c;
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form groups */
+.form-group {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  color: #495057;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.3px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Form controls */
+.form-control {
+  width: 100% !important;
+  padding: 14px;
+  border: 2px solid #ffe3eb;
+  border-radius: 10px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box !important;
+  background-color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #f06595;
+  box-shadow: 0 0 0 4px rgba(240, 101, 149, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Error messages */
+.error-message {
+  color: #e03131;
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Submit button */
+.submit-button {
+  width: 100% !important;
+  padding: 14px;
+  background: linear-gradient(to right, #f06595, #e64980);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 15px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(230, 73, 128, 0.3);
+  font-family: "Poppins", sans-serif;
+}
+
+.submit-button:hover {
+  background: linear-gradient(to right, #e64980, #d6336c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(230, 73, 128, 0.4);
+}
+
+.submit-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(230, 73, 128, 0.4);
+}
+
+.submit-button:disabled {
+  background: linear-gradient(to right, #ffc9db, #ffb0c1);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Form element overrides */
+form {
+  width: 100% !important;
+}
+
+/* Add a subtle pattern to the background */
+.login-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.3) 1%, transparent 1%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.3) 1%, transparent 1%);
+  background-size: 60px 60px;
+  opacity: 0.4;
+}

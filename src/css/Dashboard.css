@@ -1,0 +1,108 @@
+/* Dashboard container - full viewport */
+.dashboard-container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  min-height: 100vh !important;
+  width: 100% !important;
+  background: linear-gradient(135deg, #fff0f6 0%, #ffdeeb 50%, #fff0f6 100%) !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Dashboard card */
+.dashboard-card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(255, 105, 180, 0.2);
+  padding: 40px;
+  width: 90% !important;
+  max-width: 600px;
+  margin: 0 auto !important;
+  z-index: 10;
+  animation: fadeIn 0.8s ease-out;
+  border: 1px solid rgba(255, 182, 193, 0.2);
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dashboard title */
+.dashboard-title {
+  color: #d6336c;
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Dashboard content */
+.dashboard-content {
+  margin-bottom: 30px;
+  color: #495057;
+  line-height: 1.6;
+}
+
+.dashboard-content p {
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+/* Logout button */
+.logout-button {
+  padding: 12px 30px;
+  background: linear-gradient(to right, #f06595, #e64980);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 10px rgba(230, 73, 128, 0.3);
+  font-family: "Poppins", sans-serif;
+}
+
+.logout-button:hover {
+  background: linear-gradient(to right, #e64980, #d6336c);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(230, 73, 128, 0.4);
+}
+
+.logout-button:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 5px rgba(230, 73, 128, 0.4);
+}
+
+/* Add a subtle pattern to the background */
+.dashboard-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.3) 1%, transparent 1%),
+    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.3) 1%, transparent 1%);
+  background-size: 60px 60px;
+  opacity: 0.4;
+}
